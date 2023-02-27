@@ -28,6 +28,7 @@ func OnConnect(w http.ResponseWriter, r *http.Request) {
 		header.Add("Access-Control-Allow-Origin", "*")
 		header.Add("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS")
 		header.Add("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With")
+		header.Add("Access-Control-Allow-Private-Network", "Content-Type, Authorization, X-Requested-With")
 
 		if r.Method == "OPTIONS" {
 			w.WriteHeader(http.StatusOK)

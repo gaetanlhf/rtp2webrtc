@@ -1,7 +1,6 @@
 package main
 
 import (
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -45,7 +44,7 @@ func main() {
 
 	configFilePath := os.Getenv("RTP2WEBRTC_CONFIG_FILE_PATH")
 	log.Printf("Loading configuration file located at %s", configFilePath)
-	configFile, err := ioutil.ReadFile(configFilePath)
+	configFile, err := os.ReadFile(configFilePath)
 	if err != nil {
 		log.Fatal(err)
 	}
