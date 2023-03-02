@@ -20,7 +20,7 @@ NoNewPrivileges=true
 ProtectKernelModules=true
 SystemCallArchitectures=native
 ProtectHostname=true
-RestrictAddressFamilies=AF_INET AF_INET6
+RestrictAddressFamilies=AF_INET AF_INET6 AF_NETLINK
 RestrictRealtime=true
 ProtectControlGroups=true
 ProtectKernelTunables=true
@@ -29,7 +29,7 @@ ProtectClock=true
 RemoveIPC=true
 CapabilityBoundingSet=
 SystemCallFilter=@system-service
-SystemCallFilter=~@privileged @resources
+SystemCallFilter=~@privileged
 
 [Install]
 WantedBy=multi-user.target
